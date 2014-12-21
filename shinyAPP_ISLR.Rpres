@@ -1,0 +1,58 @@
+ISLR Package DataSets Exploration
+===
+author: Vishal Sharma
+date: `r date()`
+
+
+A Brief about ISLR Package
+========================================================
+
+
+- The collection of datasets used in the book ``An
+Introduction to Statistical Learning with Applications in R''
+
+
+
+- This Package consist the below Data Sets
+
+      * Auto, Caravan ,Carseats,College ,
+      * Default,Hitters,Smarket,Wage,Weekly 
+
+
+
+ShinyApp:- ISLR_DataSet_Exploration
+========================================================
+A package consist several datasets. Those datasets contains several valuable
+information that can be extracted and shown. This helps beginners to get start
+with the things.
+
+ISLR package is picked up to address above motivation. A relevant shinyApp is 
+created that contains the three important dimensioins
+
+* Top n values : Suggest how data look line
+* Linear Modeling: a modeling technique applied on the data and its outcome
+* A plot:: visual representation of feature that is important in the data set
+
+
+
+Using ShinyApp:- ISLR_DataSet_Exploration
+========================================================
+
+- Select the preferred data set from the drop down and Select the number of the  data set is required. 
+- Below is sample output of data
+
+```{r, echo=FALSE}
+library(ISLR)
+head(Default, n = 5)
+```
+
+Example ShinyApp:- ISLR_DataSet_Exploration
+========================================================
+
+- Below is sample output of linear modeling
+```{r, echo=FALSE}
+library(ISLR)
+data <- lm(Apps~Private+Accept,data=College)
+data
+```
+
